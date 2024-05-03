@@ -4,16 +4,8 @@ pipeline {
         githubPush()
     }
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/nazimgueye/fil_rouge.git'
-            }
-        }
-        stage ('Build Docker Images') {
-            steps {
-                bat 'docker-compose build'
-            }
-        }
+      
+       
         stage ('Run Tests') {
             steps {
                 bat 'docker ps -a' // Remplacez ceci par vos tests réels si nécessaire
