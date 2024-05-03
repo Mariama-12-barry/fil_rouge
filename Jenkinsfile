@@ -1,9 +1,7 @@
 pipeline {
     agent any
    
-    stages {
-      
-       
+    stages {    
         stage ('Run Tests') {
             steps {
                 bat 'docker ps -a' // Remplacez ceci par vos tests réels si nécessaire
